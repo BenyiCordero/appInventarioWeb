@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const cargarWidgetsYCards = async () => {
     const container = document.getElementById('widgets-container');
-    const response = await fetch('widgets.html');
-    const html = await response.text();
-    container.innerHTML = html;
 
     const cardsContainer = document.getElementById('cards-container');
 
