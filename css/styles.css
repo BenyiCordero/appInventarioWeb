@@ -107,3 +107,29 @@ body {
 .card-button:hover {
     background-color: #e5d59c;
 }
+
+@media (max-width: 600px) {
+    .cards-container-class {
+    grid-template-columns: 1fr !important; 
+    padding: 20px;  
+    }
+
+  .card-button {
+    width: 100%; 
+  }
+
+  .app-bar-content h1 {
+    font-size: 28px;
+  }
+
+  .bottom-nav-class a {
+    font-size: 20px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 601px) {
+  .cards-container-class {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
