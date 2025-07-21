@@ -25,6 +25,9 @@ function cargarProductos() {
         const card = document.createElement('div');
         card.classList.add('card');
 
+        const button = document.createElement('button');
+        button.classList.add('card-button'); // Usa la misma clase que en inventarios
+
         // Imagen
         const imagen = document.createElement('img');
         imagen.src = item.imagen?.url || 'https://via.placeholder.com/80';
@@ -55,11 +58,21 @@ function cargarProductos() {
         codigo.textContent = `Código: ${item.codigo}`;
         codigo.classList.add('card-codigo');
 
-        // Ensamblar card
         infoContainer.appendChild(filaSuperior);
         infoContainer.appendChild(codigo);
-        card.appendChild(imagen);
-        card.appendChild(infoContainer);
+
+        // Ensamblar todo dentro del botón
+        button.appendChild(imagen);
+        button.appendChild(infoContainer);
+
+        // Asignar evento click
+        button.onclick = () => {
+          console.log(`🟢 Click en el producto ID ${item.id}`);
+          // Puedes redirigir si quieres:
+          // window.location.href = `producto_detalle.html?id=${item.id}`;
+        };
+
+        card.appendChild(button);
         cardsContainer.appendChild(card);
       });
     })
