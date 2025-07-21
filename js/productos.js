@@ -2,6 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     cargarProductos();
   }, 100); 
+
+  const fab = document.getElementById('floating-btn');
+  if (fab){
+    fab.onclick = () => {
+      window.location.href = 'productos_crear.html';
+    };
+  } else {
+    console.warn('⚠️ No se encontró el botón flotante con id="floating-btn"')
+  }
 });
 
 function cargarProductos() {
