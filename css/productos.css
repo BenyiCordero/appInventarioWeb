@@ -73,3 +73,44 @@
         align-items: center;
     }
 }
+
+#floating-btn {
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #F8E8AC;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    font-size: 36px;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 200; 
+}
+
+#floating-btn:hover {
+    background-color: #e5d59c;
+}
+
+@media (max-width: 600px) {
+    #floating-btn {
+    bottom: 80px; 
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    #floating-btn {
+        bottom: 85px;
+        right: 25px;
+        width: 55px;
+        height: 55px;
+        font-size: 32px;
+    }
+}
