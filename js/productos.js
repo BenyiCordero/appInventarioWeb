@@ -2,6 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     cargarProductos();
   }, 100); 
+
+  const fab = document.getElementById('floating-btn');
+  if (fab){
+    fab.onclick = () => {
+      window.location.href = 'productos_crear.html';
+    };
+  } else {
+    console.warn('⚠️ No se encontró el botón flotante con id="floating-btn"')
+  }
 });
 
 function cargarProductos() {
@@ -24,6 +33,9 @@ function cargarProductos() {
       data.forEach(item => {
         const card = document.createElement('div');
         card.classList.add('card');
+
+        const button = document.createElement('button');
+        button.classList.add('card-button'); // Usa la misma clase que en inventarios
 
         // Imagen
         const imagen = document.createElement('img');
@@ -55,11 +67,21 @@ function cargarProductos() {
         codigo.textContent = `Código: ${item.codigo}`;
         codigo.classList.add('card-codigo');
 
-        // Ensamblar card
         infoContainer.appendChild(filaSuperior);
         infoContainer.appendChild(codigo);
-        card.appendChild(imagen);
-        card.appendChild(infoContainer);
+
+        // Ensamblar todo dentro del botón
+        button.appendChild(imagen);
+        button.appendChild(infoContainer);
+
+        // Asignar evento click
+        button.onclick = () => {
+          console.log(`🟢 Click en el producto ID ${item.id}`);
+          // Puedes redirigir si quieres:
+          // window.location.href = `producto_detalle.html?id=${item.id}`;
+        };
+
+        card.appendChild(button);
         cardsContainer.appendChild(card);
       });
     })

@@ -89,9 +89,10 @@ body {
     padding-right: 15px;
     padding-left: 30px;
     cursor: pointer;
-    display: inline-flex;
-    align-items: baseline;
-    justify-content: baseline;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
     width: 100%;
 }
 
