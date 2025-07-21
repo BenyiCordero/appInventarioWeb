@@ -13,7 +13,7 @@ function cargarProductos() {
 
   console.log('✅ cards-container encontrado, cargando productos...');
 
-  fetch('https://8c6e7e61855d.ngrok-free.app/productos', {
+  fetch('https://c701c0cba898.ngrok-free.app/productos', {
     headers: {
       'ngrok-skip-browser-warning': 'true'
     }

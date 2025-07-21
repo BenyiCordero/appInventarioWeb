@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     cargarInventarios();
-  }, 100); // Esperamos 100ms para que widgets.html se cargue
+  }, 100); 
 });
 
 function cargarInventarios() {
@@ -13,7 +13,7 @@ function cargarInventarios() {
 
   console.log('✅ cards-container encontrado, cargando inventarios...');
 
-  fetch('https://8c6e7e61855d.ngrok-free.app/inventarios', {
+  fetch('https://c701c0cba898.ngrok-free.app/inventarios', {
     headers: {
       'ngrok-skip-browser-warning': 'true'
     }

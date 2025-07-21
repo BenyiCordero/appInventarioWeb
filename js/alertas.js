@@ -13,7 +13,7 @@ function cargarAlertas() {
 
   console.log('✅ cards-container encontrado, cargando alertas...');
 
-  fetch('https://8c6e7e61855d.ngrok-free.app/productoDetails', {
+  fetch('https://c701c0cba898.ngrok-free.app/productoDetails', {
     headers: {
       'ngrok-skip-browser-warning': 'true'
     }
