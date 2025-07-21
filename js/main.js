@@ -2,6 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     cargarInventarios();
   }, 100); 
+
+  const fab = document.getElementById('floating-btn');
+  if (fab){
+    fab.onclick = () => {
+      window.location.href = 'inventarios_crear.html';
+    };
+  } else {
+    console.warn('⚠️ No se encontró el botón flotante con id="floating-btn"')
+  }
 });
 
 function cargarInventarios() {
@@ -40,6 +49,11 @@ function cargarInventarios() {
           year: 'numeric'
         });
         date.textContent = fechaFormateada;
+
+        button.onclick = () => {
+          console.log('Click en el inventario ID ${item.id}');
+          //window.location...
+        }
 
         button.appendChild(title);
         button.appendChild(date);
