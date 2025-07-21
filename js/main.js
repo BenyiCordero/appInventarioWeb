@@ -7,7 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cardsContainer = document.getElementById('cards-container');
 
-    fetch('https://8c6e7e61855d.ngrok-free.app/inventarios')
+    fetch('https://8c6e7e61855d.ngrok-free.app/inventarios' , {
+      headers: {
+        'ngrok-skip-browser-warning': 'true'
+      }
+    })
       .then(response => response.json())
       .then(data => {
         data.forEach(item => {
